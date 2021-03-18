@@ -1,5 +1,5 @@
 import cookie from 'cookie';
 
-const parsed = cookie.parse(`foo="bar=123456789&name=Magic+Mouse"`);
+const parsed = cookie.parse('foo=bar; equation=E%3Dmc%5E2');
 
-export default parsed;
+export default `<pre>${JSON.stringify(parsed, null, 2)}</pre>`;

@@ -9,6 +9,10 @@ async function server() {
 
 	/** @type {vite.ViteDevServer} */
 	const viteInstance = await vite.createServer({
+		// @ts-ignore
+		ssr: {
+			noExternal: ['cookie']
+		},
 		plugins: [],
 		server: { middlewareMode: true }
 	});
